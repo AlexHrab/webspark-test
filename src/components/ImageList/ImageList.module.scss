@@ -1,0 +1,157 @@
+.likesBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: first baseline;
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 203px);
+  gap: 16px 8px;
+  width: 100%;
+  max-width: 836px;
+  margin: 0 auto 20px auto;
+  justify-content: center;
+
+  &.list {
+    grid-template-columns: 1fr;
+    gap: 8px 0;
+    padding: 0 16px;
+  }
+}
+
+.element {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+
+  &.list {
+    width: 100%;
+    flex-direction: row;
+  }
+}
+
+.info {
+  box-sizing: border-box;
+  max-width: 203px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 12px 18px 12px;
+  background: #f8f8f8;
+
+  &.list {
+    max-width: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-right: 79px;
+  }
+}
+
+.innerWraper {
+  display: flex;
+  gap: 30px;
+
+  &.list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.reactionBox {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+}
+
+.statisticBox {
+  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-family: "Roboto", sans-serif;
+
+  &.list {
+    flex-direction: row;
+    gap: 20px;
+  }
+}
+
+.photo {
+  width: 203px;
+  height: 203px;
+  object-fit: cover;
+  display: block;
+
+  &.list {
+    width: 86px;
+    height: 86px;
+  }
+}
+
+.title {
+  font-size: 16px;
+  margin-top: 0;
+  margin-bottom: 7px;
+  font-family: "Roboto", sans-serif;
+}
+
+.main {
+  margin: 0 auto;
+}
+
+.imageUpload {
+  display: flex;
+  gap: 29px;
+  margin-top: 25px;
+
+  &.list {
+    flex-direction: column;
+    margin: 0;
+    gap: 7px;
+    justify-self: flex-end;
+  }
+}
+
+.uploadTitle {
+  margin: 0;
+  font-size: 14px;
+  white-space: nowrap;
+  font-family: "Roboto", sans-serif;
+
+  &.list {
+    font-size: 16px;
+  }
+}
+
+.uploadDate {
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+
+  &.list {
+    font-size: 14px;
+  }
+}
+
+.position {
+  grid-column: 1 / -1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-bottom: 23px;
+}
+
+@media (max-width: 768px) {
+  .info {
+    &.list {
+      padding-right: 12px;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .positionList {
+    display: none;
+  }
+}

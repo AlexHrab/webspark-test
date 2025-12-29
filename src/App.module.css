@@ -1,0 +1,52 @@
+.main {
+  width: 100%;
+  max-width: 836px;
+  margin: 0 auto 20px auto;
+}
+
+.position {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-bottom: 23px;
+}
+
+.loadMoreBtn {
+  border: 2px solid rgba(146, 146, 146, 1);
+  border-radius: 15px;
+  color: rgba(146, 146, 146, 1);
+  padding: 8px 26px;
+  font-size: 11px;
+  font-weight: 500;
+  font-family: "Roboto", sans-serif;
+  outline: none;
+  background: transparent;
+  margin: 0 auto;
+  display: block;
+}
+
+.loaderContainer {
+  position: fixed;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(255, 255, 255, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(255, 255, 255, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
