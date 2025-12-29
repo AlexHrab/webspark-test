@@ -49,3 +49,10 @@
   align-items: center;
   z-index: 9999;
 }
+
+.noPhotos {
+  justify-self: center;
+  color: rgba(64, 175, 121, 1);
+  font-size: 28px;
+  font-weight: 500;
+}

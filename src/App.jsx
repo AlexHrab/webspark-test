@@ -60,6 +60,9 @@ function App() {
 
         <div className={css.main}>
           <ImageList photos={filteredPhotos} />
+          {!loading && filteredPhotos.length === 0 && (
+            <p className={css.noPhotos}>no photos found in this period</p>
+          )}
 
           <button
             className={css.loadMoreBtn}
