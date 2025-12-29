@@ -10,6 +10,7 @@ export function DataPicker({ selectedDate, onChange, className }) {
       placeholderText="Select a date"
       popperClassName="no-arrow"
       showPopperArrow={false}
+      popperPlacement="bottom-start"
       className={className}
     />
   );
