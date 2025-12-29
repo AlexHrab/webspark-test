@@ -1,0 +1,48 @@
+.pickerWrapper {
+  position: relative;
+  display: inline-block;
+  height: 100%;
+}
+
+.closeWrapper {
+  position: absolute;
+  right: 22px;
+  top: 55%;
+  transform: translateY(-50%);
+  padding: 0 1px;
+  border: 1.5px solid rgb(164, 163, 163);
+  background: rgb(203, 202, 202);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+}
+
+.closeIcon {
+  fill: rgba(95, 95, 95, 1);
+  stroke: rgba(95, 95, 95, 1);
+  height: 20px;
+  width: 20px;
+}
+
+.calendarWrapper {
+  position: absolute;
+  right: 0px;
+  top: 55%;
+  transform: translateY(-50%);
+  border: 1.5px solid rgb(164, 163, 163);
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+  background: rgb(203, 202, 202);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  height: 100%;
+  padding: 0 1px;
+}
+
+.calendarIcon {
+  fill: rgba(95, 95, 95, 1);
+  height: 20px;
+  width: 20px;
+}
