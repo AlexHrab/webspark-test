@@ -1,172 +1,192 @@
 .header {
-  padding: clamp(15px, 3vw, 20px) 0 clamp(5px, 1vw, 10px) 0;
-  width: 100%;
-  margin-bottom: clamp(15px, 2vw, 18px);
-  position: relative;
   background: rgba(255, 255, 255, 0.7);
-  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.12),
-    inset 0px 12px 24px 0px rgba(0, 0, 0, 0.12);
-
-  @media (max-width: 380px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: clamp(20px, 5vw, 30px);
-  }
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.12),
+    inset 0 12px 24px rgba(0, 0, 0, 0.12);
+  padding: 20px 0;
+  margin-bottom: 20px;
 }
 
-.groupImage {
-  position: absolute;
-  top: 15px;
-  left: clamp(5%, 5vw + 18%, 28%);
-  z-index: 10;
+.container {
+  display: flex;
+  align-items: flex-start;
+  padding: 0 3%;
+  position: relative;
+}
+
+.avatar {
+  width: 120px;
   height: auto;
-  width: clamp(100px, 12vw + 20px, 130px);
-
-  @media (max-width: 460px) {
-    left: clamp(3%, 4vw, 8%);
-  }
-
-  @media (max-width: 380px) {
-    position: static;
-    width: 100px;
-    margin-bottom: clamp(15px, 4vw, 20px);
-  }
+  flex-shrink: 0;
+  position: absolute;
+  left: 28%;
+  top: 0;
 }
 
-.logoWrapper {
+.content {
   margin-left: auto;
-  margin-right: clamp(2%, 3vw, 3%);
-  max-width: clamp(50%, 55vw, 55%);
-  margin-bottom: clamp(10px, 2vw, 15px);
-
-  @media (max-width: 768px) {
-    padding: 0 clamp(12px, 4vw, 20px);
-    padding-top: clamp(5px, 2vw, 10px);
-  }
-
-  @media (max-width: 460px) {
-    margin-left: clamp(110px, 15vw + 90px, 140px);
-    max-width: calc(
-      100% - clamp(110px, 15vw + 90px, 140px) - clamp(2%, 3vw, 3%)
-    );
-  }
-
-  @media (max-width: 380px) {
-    margin-left: 0;
-    margin-right: 0;
-    max-width: 100%;
-    text-align: center;
-    padding: 0 clamp(15px, 5vw, 20px);
-  }
+  margin-right: 20%;
+  max-width: 55%;
 }
 
-.title {
+.topRow {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.username {
   margin: 0;
-  font-size: clamp(16px, 3vw, 24px);
+  font-size: 22px;
   font-weight: 500;
   font-family: "Montserrat", sans-serif;
-  line-height: 1.2;
-
-  @media (min-width: 769px) {
-    display: inline-block;
-    margin-right: clamp(12px, 2vw, 16px);
-  }
-
-  @media (max-width: 768px) {
-    display: block;
-    margin-bottom: clamp(8px, 1.5vw, 10px);
-  }
 }
 
-.startOn {
-  display: inline-block;
-  padding: clamp(4px, 0.8vw, 7px) clamp(8px, 1.5vw, 12px);
-  border: 1px solid rgba(61, 142, 218, 1);
-  color: rgba(61, 142, 218, 1);
+.badge {
+  padding: 6px 10px;
+  border: 1px solid #3d8eda;
+  color: #3d8eda;
   border-radius: 2px;
-  font-size: clamp(11px, 1.8vw, 14px);
+  font-size: 13px;
   white-space: nowrap;
-  line-height: 1.4;
 }
 
-.statisticsWrapper {
+.stats {
   display: flex;
-  gap: clamp(10px, 2.5vw, 20px);
+  gap: 16px;
   flex-wrap: wrap;
-  margin-top: clamp(8px, 1.5vw, 10px);
+  margin-bottom: 10px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+}
 
-  @media (max-width: 380px) {
+.stat {
+  strong {
+    font-weight: 700;
+    margin-right: 4px;
+  }
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.filterLabel {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.datePicker {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 200px;
+
+  :global(.react-datepicker) {
+    font-size: 14px;
+  }
+}
+
+.dateLabel {
+  color: #808080;
+  font-size: 8px;
+}
+
+@media (max-width: 850px) {
+  .filters {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filterLabel {
+    margin-bottom: 5px;
+  }
+}
+
+@media (max-width: 1150px) {
+  .avatar {
+    left: 5%;
+  }
+
+  .content {
+    margin-right: 5%;
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    max-width: 65%;
+  }
+}
+
+@media (max-width: 768px) {
+  .avatar {
+    position: static;
+    width: 100px;
+  }
+
+  .container {
+    gap: 16px;
+  }
+
+  .content {
+    margin-left: 0;
+    margin-right: 0;
+    max-width: none;
+    flex: 1;
+  }
+
+  .username {
+    font-size: 18px;
+  }
+
+  .stats {
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 460px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avatar {
+    width: 100px;
+    margin-bottom: 15px;
+  }
+
+  .content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .topRow {
     justify-content: center;
   }
-}
 
-.statisticsTitle {
-  font-size: clamp(12px, 1.8vw, 14px);
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  margin: 0;
-  line-height: 1.4;
+  .stats {
+    justify-content: center;
+  }
 
-  @media (max-width: 380px) {
+  .stat {
     display: flex;
     flex-direction: column;
     gap: 2px;
   }
-}
 
-.statisticsTitleItem {
-  font-size: clamp(11px, 1.8vw, 14px);
-  font-family: "Roboto", sans-serif;
-  font-weight: 400;
-}
-
-.pickerWrapper {
-  display: flex;
-  gap: clamp(12px, 2vw, 16px);
-  margin-top: clamp(8px, 1.5vw, 10px);
-  align-items: flex-start;
-
-  @media (min-width: 851px) {
-    flex-direction: row;
-    flex-wrap: wrap;
+  .filters {
     align-items: center;
+    width: 100%;
   }
 
-  @media (max-width: 850px) {
-    flex-direction: column;
-    align-items: stretch;
+  .datePicker {
+    width: 100%;
+    max-width: 250px;
   }
-}
-
-.pickerWrapper :global(.react-datepicker) {
-  font-size: clamp(13px, 1.8vw, 14px);
-}
-
-.pickerWrapperTitle {
-  margin: 0;
-  font-size: clamp(13px, 1.8vw, 14px);
-  font-weight: 500;
-  flex-shrink: 0;
-
-  @media (max-width: 850px) {
-    margin-bottom: clamp(4px, 1vw, 5px);
-  }
-}
-
-.pickerContainer {
-  display: flex;
-  flex-direction: column;
-  width: 200px;
-  gap: clamp(2px, 0.5vw, 4px);
-
-  @media (min-width: 851px) {
-    flex: 0 0 auto;
-  }
-}
-
-.pickerCaption {
-  color: grey;
-  font-size: clamp(7px, 1vw, 8px);
-  line-height: 1.2;
 }
