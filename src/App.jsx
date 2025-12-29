@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import css from "./App.module.css";
 import getPictureWithValue from "./infrastructure/unsplash";
 import { ImageList } from "./components/ImageList/ImageList";
@@ -38,17 +38,20 @@ function App() {
     }
   };
 
-  const filterPhotosByDate = (fromDate, toDate) => {
-    if (!fromDate || !toDate) {
-      setFilteredPhotos(photos);
-      return;
-    }
-    const filtered = photos.filter((photo) => {
-      const created = new Date(photo.created_at);
-      return created >= fromDate && created <= toDate;
-    });
-    setFilteredPhotos(filtered);
-  };
+  const filterPhotosByDate = useCallback(
+    (fromDate, toDate) => {
+      if (!fromDate || !toDate) {
+        setFilteredPhotos(photos);
+        return;
+      }
+      const filtered = photos.filter((photo) => {
+        const created = new Date(photo.created_at);
+        return created >= fromDate && created <= toDate;
+      });
+      setFilteredPhotos(filtered);
+    },
+    [photos]
+  );
 
   return (
     <>

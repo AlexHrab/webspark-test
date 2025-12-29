@@ -90,6 +90,16 @@
   width: 200px;
 }
 
+.pickerContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.pickerCaption {
+  color: grey;
+  font-size: 8px;
+}
+
 @media (max-width: 768px) {
   .groupImage {
     left: 12%;

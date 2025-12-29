@@ -47,16 +47,22 @@ export function Header({ photos, onFilter }) {
 
         <div className={css.pickerWrapper}>
           <p className={css.pickerWrapperTitle}>Date</p>
-          <DataPicker
-            selectedDate={fromDate}
-            onChange={setFromDate}
-            className={css.picker}
-          />
-          <DataPicker
-            selectedDate={toDate}
-            onChange={setToDate}
-            className={css.picker}
-          />
+          <div className={css.pickerContainer}>
+            <DataPicker
+              selectedDate={fromDate}
+              onChange={setFromDate}
+              className={css.picker}
+            />
+            <span className={css.pickerCaption}>latest uploaded</span>
+          </div>
+          <div className={css.pickerContainer}>
+            <DataPicker
+              selectedDate={toDate}
+              onChange={setToDate}
+              className={css.picker}
+            />
+            <span className={css.pickerCaption}>earliest uploaded</span>
+          </div>
         </div>
       </div>
     </div>
