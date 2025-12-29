@@ -75,3 +75,9 @@ h1 {
     width: 190px;
   }
 }
+
+.react-datepicker__input-container input:focus,
+.react-datepicker__input-container input:focus-visible {
+  outline: none;
+  box-shadow: none;
+}
