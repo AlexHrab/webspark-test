@@ -59,10 +59,19 @@ h1 {
 .react-datepicker__input-container input,
 .react-datepicker__input-container {
   height: 24px;
+
+  @media (max-width: 768px) {
+    height: 35px;
+    font-size: 20px;
+  }
 }
 
 .react-datepicker__input-container input {
   border: 1.5px solid rgb(164, 163, 163);
   border-radius: 3px;
   color: rgba(95, 95, 95, 1);
+
+  @media (max-width: 768px) {
+    width: 190px;
+  }
 }

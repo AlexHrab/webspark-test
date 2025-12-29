@@ -1,7 +1,7 @@
 .main {
   width: 100%;
-  max-width: 836px;
   margin: 0 auto 20px auto;
+  padding: 0 16px;
 }
 
 .position {
